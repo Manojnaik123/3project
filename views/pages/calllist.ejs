@@ -1,0 +1,86 @@
+<% layout('layout/boiler')  %> 
+<div class="space">
+
+</div>
+<div class="callbg">
+    <% for(let d of data) {%> 
+        <div class="max">
+            <div class="max1">
+                <span><%=d.num  %> </span>
+            </div>
+            <div class="max2">
+                <a href="https://wa.me/+91<%=d.num%>/?text=hello,">
+                    <img src="/assets/images/whatsapp.png" alt="">
+                </a>
+            </div>
+    
+        </div>
+        
+        <% } %> 
+</div>
+
+
+<style>
+    .space{
+        height: 100px;
+    }
+    .max{
+        width: 40%;
+        margin-left: auto;
+        margin-right: auto;
+        height: 80px;
+        display: flex;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        border-radius: 10px;
+        background-color: #cfe1b9;
+    }
+    .max1{
+        width: 85%;
+         
+         border-radius: 10px 0px 0px 10px;
+         display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .max2{
+        width: 15%;
+        height: 100%;
+        border-radius: 0px 10px 10px 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-left: 1px solid grey;
+    }
+    .max2 img{
+        width: 50px;
+        height: 50px;
+    }
+    .callbg{
+        
+        width: 100%;
+       
+    }
+    
+    .max1 span{
+       font-size: 20px;
+
+    }    
+    body{
+        background-image: url('/assets/images/apartment-1.jpg');
+
+    }
+    @media (max-width: 767px) {
+    .max{
+        width: 70%;
+        margin-top: 10px;
+    }
+    .max1{
+        width: 70%;
+    }
+    .max2{
+        width: 30%;
+    }
+      
+  }
+</style> 
